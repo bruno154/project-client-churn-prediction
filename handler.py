@@ -5,7 +5,7 @@ from MyTransformers import PreProcessingTransformer
 from flask import Flask, request
 
 # Load Model
-model=pickle.load(open('models/modelo_SVM.pkl', 'rb'))
+model=pickle.load(open('models/modelo_QDA.pkl', 'rb'))
 
 # Instanciando o Flask
 app=Flask(__name__)
