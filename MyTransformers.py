@@ -104,14 +104,14 @@ class PreProcessingTransformer(BaseEstimator, TransformerMixin):
         for var in variaveis_numerical:
             Xtemp[var] = scaler.fit_transform(np.array(Xtemp[var]).reshape(-1,1))
             
-        Xtemp = Xtemp[ ['EstimatedSalary', 
-                        'Geography', 
-                        'Age', 
-                        'NumOfProducts', 
-                        'Tenure', 
-                        'Gender', 
-                        'IsActiveMember', 
-                        'Balance']]
+        Xtemp = Xtemp[['EstimatedSalary', 
+                       'Balance', 
+                       'NumOfProducts', 
+                       'Gender', 
+                       'IsActiveMember', 
+                       'Tenure', 
+                       'Geography', 
+                       'Age']]
 
 
         return Xtemp
